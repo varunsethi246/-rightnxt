@@ -1,0 +1,290 @@
+<template name="adminStatistics">
+  <div class="main">
+    {{#with adminStatistics}}
+
+    <div class="row-fluid">
+        <h3>Dashboard</h3>
+        <!-- <div>
+            <ul class="col-md-8 col-sm-12 activeOne">
+                <li>
+                    <a href="#">Home / </a>
+                </li>
+                <li>
+                    <a href="#">Right Nxt / </a>
+                </li>
+                <li>
+                    <a href="#">Dasbaord</a>
+                </li>
+            </ul>
+        </div>
+        <div class="input-group col-md-4 hidden-sm hidden-xs">
+            <input type="text" class="form-control"
+                placeholder="Search" id="inputGroup"/>
+            <span class="input-group-addon">
+            <i class="fa fa-search"></i>
+            </span>
+        </div> -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-6 rowOnePad">
+            <div class="firstRow">
+                <div class="col-lg-3 col-md-2 col-sm-12">
+                    <div class="new-user">
+                        <i class="fa fa-user fa-5x" ></i>
+                        <div class="info userStatistics">+ {{userCounts}}</div>
+                        <div class="status statusStatistics">Number of Users</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-12">
+                    <div class="Vendor">
+                        <i class="fa fa-user fa-5x"></i>
+                        <div class="info vendorStatistics">+ {{vendorCounts}}</div>
+                        <div class="status vendorStatus">Number of Vendors</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-12 overflowBusiness">
+                   <div class="business">
+                        <i class="fa fa-briefcase fa-5x"></i>
+                        
+                        <span class="businessStatisticsActs">Active Business +</span> 
+                        <div class="info businessStatisticsAct"> <span>{{busActCounts}}</span></div>
+                        
+                        <span class="businessStatisticsInacts">Inactive Business +</span> 
+                        <div class="info businessStatisticsInact"><span>{{busInactCounts}}</span>{{busInactCounts}}</div>
+                        
+                        <div class="status businessStatus">Number Of Business</div>
+                    </div> 
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 overflowVisitor">
+                    <div class="visitor">
+                        <i class="fa fa-eye fa-5x"></i>
+                        <span class="visitStatisticsToday">Number Of visit Today</span>
+                        <div class="info visitStatisticsCount">+ 897</div>
+
+                        <span class="visitStatisticsToday">Number Of visit Month</span>
+                        <div class="info visitStatisticsCount">+ 97</div>
+
+                        <div class="status visitStatus">Number of Visits</div>
+                    </div>
+                </div>
+               <!--  <div class="col-lg-2 col-md-2 col-sm-12">
+                    <div class="update">
+                        <i class="fa fa-bar-chart fa-5x"></i>
+                        <div class="info" style="font-size: 24px;float:right;margin-top:18px;">+288</div>
+                        <div class="status" style="font-size: 14px;position: absolute;left: 10px;">Update</div>
+                    </div> 
+                </div> -->
+            </div>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-6 rowOnePad  ">
+            <div class="secondRow">
+                <div class="col-lg-3 col-md-2 col-sm-12">
+                    <div class="new-order Adds">
+                        <i class="fa fa-certificate fa-5x"></i>
+                        <div class="addsWeek">This Week </div>
+                        <div class="info weekCount">+ 29</div>
+                        <div class="addsMonth">This Month</div>
+                        <div class="info monthCount">+ 255</div>
+                        <div class="addsYear">This Year</div>
+                        <div class="info yearCount">+ 58624</div>
+                        <div class="status AddsTitle">Number of Adds</div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-12">
+                    <div class="cancelled Banner">
+                        <div class="addsWeek">This Week </div>
+                        <div class="info weekCount">+ 49</div>
+                        <div class="addsMonth">This Month</div>
+                        <div class="info monthCount">+ 523</div>
+                        <div class="addsYear">This Year</div>
+                        <div class="info yearCount">+ 2536</div>
+                        <div class="status offerTitle">Number of Banner</div> 
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-2 col-sm-12">
+                    <div class="messages Offers">
+                        <i class="fa fa-bullhorn fa-5x"></i>
+                        <!-- <i class="fa fa-envelope fa-5x"></i> -->
+                        <!-- <div class="info" style="font-size: 24px;float:right;margin-top:18px;">123</div> -->
+                        <div class="addsWeek">This Week </div>
+                        <div class="info weekCount">+ {{offerWeek}}</div>
+                        <div class="addsMonth">This Month</div>
+                        <div class="info monthCount">+ {{offerMonth}}</div>
+                        <div class="addsYear">This Year</div>
+                        <div class="info yearCount">+ {{offerYear}}</div>
+                        <div class="status offerTitle">Number of Offers</div>    
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="stock Enquiry">
+                        <i class="fa fa-headphones fa-5x"></i>
+                        <!-- <div class="info" style="font-size: 24px;float:right;margin-top:18px;">$37624</div> -->
+                        <div class="addsWeek">This Week </div>
+                        <div class="info weekCount">+ {{enqWeek}}</div>
+                        <div class="addsMonth">This Month</div>
+                        <div class="info monthCount">+ {{enqMonth}}</div>
+                        <div class="addsYear">This Year</div>
+                        <div class="info yearCount">+ {{enqYear}}</div>
+                        <div class="status bannerTitle">Number of Enquiry</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12" style="margin-bottom: 20px;">
+            <div style="border: 1px solid #404040;">
+                <div class="col-lg-12 col-sm-12 col-sm-12 col-xm-12" style="background-color: #404040; height: 30px;">
+                    <i class="fa fa-bars " aria-hidden="true" style="color: #fff; margin-top: 7px;"></i>
+                    <span style="color: #fff;">Doughnut</span>
+                    <i class="fa fa-times pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <i class="fa fa-chevron-down pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                </div>
+                <div style="text-align: center;">
+                    <img src="./images/img.PNG">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12" style="margin-bottom: 20px;">
+            <div style="border: 1px solid #74B749;">
+                <div class="col-lg-12 col-sm-12 col-sm-12 col-xm-12" style="background-color: #74B749; height: 30px;">
+                    <i class="fa fa-bars " aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <span style="color: #fff;">Line</span>
+                    <i class="fa fa-times pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <i class="fa fa-chevron-down pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                </div>
+                <div style="text-align: center;">
+                    <img src="./images/img1.PNG">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-sm-12" style="margin-bottom: 20px;">
+            <div style="border: 1px solid #F37B53;">
+                <div class="col-lg-12 col-sm-12 col-sm-12 col-xm-12" style="background-color: #F37B53; height: 30px;">
+                    <i class="fa fa-tasks " aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <span style="color: #fff;">General Statistics</span>
+                    <i class="fa fa-times pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <i class="fa fa-chevron-down pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <span class="pull-right" style="width:67px;height: 22px;margin-top: 4px;background-color: white;padding: 1px;padding-left: 5px; ">
+                    <i class="fa fa-repeat"></i>update
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <img src="./images/img2.PNG">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-sm-12" style="margin-bottom: 20px;">
+            <div style="border: 1px solid #9D4A9C;">
+                <div class="col-lg-12 col-sm-12 col-sm-12 col-xm-12" style="background-color: #9D4A9C; height: 30px;">
+                    <i class="fa fa-tasks " aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <span style="color: #fff;">General Statistics</span>
+                    <i class="fa fa-times pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <i class="fa fa-chevron-down pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                </div>
+                <div style="text-align: center;">
+                    <img src="./images/img3.PNG">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12" style="margin-bottom: 20px;">
+            <div style="border: 1px solid #FFB400;">
+                <div class="col-lg-12 col-sm-12 col-sm-12 col-xm-12" style="background-color: #FFB400; height: 30px;">
+                    <i class="fa fa-calendar " aria-hidden="true" style="color: #fff; margin-top: 7px;"></i>
+                    <span style="color: #fff;">Calendar</span>
+                    <i class="fa fa-bars pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <i class="fa fa-chevron-down pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                </div>
+                <div style="text-align: center;">
+                    <img src="./images/img4.PNG" style="width: 98%;" >
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12" style="margin-bottom: 20px;">
+            <div style="border: 1px solid #9D4A9C;">
+                <div class="col-lg-12 col-sm-12 col-sm-12 col-xm-12" style="background-color: #9D4A9C; height: 30px;">
+                    <i class="fa fa-tasks " aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <span style="color: #fff;">Task In Progress</span>
+                    <i class="fa fa-times pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <i class="fa fa-chevron-down pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                </div>
+                <ul style="text-decoration:none;list-style: none; margin-top: 8px;">
+                    <li>
+                        <div style="background-color: #484848;width: 31px;height: 27px;position: absolute;color: #fff;">
+                            <i class="fa fa-refresh" style="padding: 6px;margin-left: 4px"></i>
+                        </div>
+                        <div style="padding: 2px;margin-left: 32px;margin-top: 42px;">Update Jquery</div>
+                        <div style="margin-top:-23px;margin-left: 129px;width: 32px;height: 25px;background-color: #999999;padding: 3px;color: #fff;margin-bottom:9px; ">48%</div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:48%">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="background-color: #484848;width: 31px;height: 27px;position: absolute;color: #fff;">
+                            <i class="fa fa-check-square" style="padding: 6px;margin-left: 4px"></i>
+                        </div>
+                        <div style="padding: 2px;margin-left: 32px;">
+                            Update font awesome
+                        </div>
+                        <div style="margin-top:-23px;margin-left: 176px;width: 32px;height: 25px;background-color: #A5D16C;padding: 3px;color: #fff;margin-bottom:9px;">85%</div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:85%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="background-color: #484848;width: 31px;height: 27px;position: absolute;color: #fff;">
+                            <i class="fa fa-fire" style="padding: 6px;margin-left: 4px"></i>
+                        </div>
+                        <div style="padding: 2px;margin-left: 32px;">
+                            Update CSS3
+                        </div>
+                        <div style="margin-top:-23px;margin-left: 122px;width: 32px;height: 25px;background-color: #E74955;padding: 3px;color: #fff;margin-bottom:9px;">65%</div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:65%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12" style="margin-bottom: 20px;">
+            <div style="border: 1px solid #F37B53;">
+                <div class="col-lg-12 col-sm-12 col-sm-12 col-xm-12" style="background-color: #F37B53; height: 30px;">
+                    <i class="fa fa-bell-o " aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <span style="color: #fff;">Alert</span>
+                    <i class="fa fa-times pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                    <i class="fa fa-chevron-down pull-right" aria-hidden="true" style="color: #fff;margin-top: 7px;"></i>
+                </div>
+                <div class="alert alert-warning alert-dismissable" style="width: 95%;height: 53px;margin-top: 44px;margin-left: 14px;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="alert alert-success alert-dismissable" style="width: 95%;height: 53px;margin-top: 44px;margin-left: 14px;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="alert alert-info alert-dismissable" style="width: 95%;height: 53px;margin-top: 44px;margin-left: 14px;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="alert alert-danger alert-dismissable" style="width: 95%;height: 53px;margin-top: 44px;margin-left: 14px;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+            </div>
+        </div>
+    </div> -->
+    {{/with}}
+
+</div>
+</template>

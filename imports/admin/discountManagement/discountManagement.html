@@ -1,0 +1,64 @@
+<template name="discountManagement">
+	<div class="whiteBox">
+		<div class="col-lg-12 bannerEdit addNewJob" id="">
+	        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 webpageForm">
+	            <h1>Discount Management</h1>
+	            <hr class="webpageFormUnderline">
+	            <form class="">
+	            	<div class="col-lg-12 col-md-10 discountTable">
+		                <div class="table-responsive">
+							<table class="table table-striped myTable">
+								<thead>
+									<tr class="TableHeader">
+										<th> > Price       </th>
+										<th> Discount in % </th>
+									</tr>
+								</thead>
+								<tbody class="myTableData">
+									<tr>
+										<td>
+							   			<input type="number" id="price" name="price" class="form-control" placeholder="" value="{{price}}">
+							   		</td>
+							   		<td>
+							   			<input type="number" id="discount" name="discount" class="form-control" placeholder="" value="{{discount}}">
+							   		</td>
+									</tr>
+									<tr>Note: Please enter the discount and press enter button to submit</tr>
+								</tbody>
+							</table>
+		                </div>
+						<br>
+						<br>
+						<br>
+		            </div>
+		        </form>
+		        <h3>List Of Discounts</h3>
+		         <div class="table-responsive">
+					<table class="table table-striped myTable">
+						<thead>
+							<tr class="TableHeader">
+								<!-- <th> Sr No       </th> -->
+								<th> > Price       </th>
+								<th> Discount in % </th>
+								<th> Action </th>
+							</tr>
+						</thead>
+						<tbody class="myTableData">
+						{{#each discounts}}
+							<tr id="{{id}}">
+							<!-- <td>{{srno}}</td> -->
+							<td>{{price}}</td>
+					   		<td>{{discount}}</td>
+					   		<td style="text-align: center;">
+					   			<button><i class="fa fa-trash delete" aria-hidden="true" title="delete"></i></button>
+					   			<button><i class="fa fa-pencil edit" aria-hidden="true" title="edit"></i></button>
+					   		</td>
+							</tr>
+						{{/each}}
+						</tbody>
+					</table>
+                </div>
+		    </div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,78 @@
+<template name="vendorOffer2">
+	<form id="OfferForm">
+		<div class="row">
+			<div class="col-lg-12 col-md-12  col-sm-12 col-xs-12 ">			
+				<div class="form-group">
+					<div class="row vendor-colomn">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<label class="bold">Deal Templates</label>
+							<select class="form-control vendorSelectArrow selectpicker" name="dealTemplate" required="true">
+								<option>Create Your own Deal</option>
+							</select>
+						</div>
+						{{#with formvaluesData}}
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="bold">Deal Heading/Headline (40 char. max)</label>
+								<input type="text" name="dealHeadline" value="{{dealHeadline}}" maxlength="40" class="form-control" required="true">
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="bold">Deal Description (80 char. max)</label>
+								<textarea maxlength="80" name="dealDescription" value="{{dealDescription}}" class="form-control" required="true"></textarea>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="bold expireLabel col-lg-12 col-sm-12 col-md-12 col-xs-12">Expiration Date</label> 
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<div class="row">
+										<div class="col-lg-1 col-md-1 col-sm-1 col-xs-4 fromDate">
+											<label class="bold">From</label>	
+										</div>
+										<div class="col-lg-5 col-md-5 col-sm-5 col-xs-8 toVen2Buss1">
+											<input type="date" class="form-control changeDate" id="usrtimeOne" name="expirationFromDate" value="{{expirationFromDate}}" required="true" disabled="true">		
+										</div>
+										<div class="col-lg-1 col-md-1 col-sm-1 col-xs-4 fromDate toVen2Buss">
+											<label class="bold toDate">To</label>	
+										</div>
+										<div class="col-lg-5 col-md-5 col-sm-5 col-xs-8">
+											<input type="date" class="form-control" id="usrtimeOne" name="expirationToDate" value="{{expirationToDate}}" required="true" disabled="true">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="bold">Legal Notices &amp; Disclaimers (240 char. max)</label>
+								<textarea maxlength="240" value="{{legalNotices}}" class="form-control" name="legalNotices" required="true"></textarea>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="bold">Picture</label>
+								<div class="row venBusiOffer">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+										<input type="file" name="files" class="businessOffersfiles inputImg">
+										<input type="button" name="chooseVendor2Pic" value="Choose Picture" class="form-control uploadButton1">
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 vendor2Imge">
+										<output></output>
+										<span class="vendor2Img">
+											<img class="thumbnail draggedImg imgVendorSpan" src='{{#if offerImgData}}{{offerImgData.url}}}{{else}}{{offerImage}}{{/if}}'>
+										</span>
+										<span class="noFile drag vendor2Drag">No File Chosen</span>
+									</div>	
+								</div>						
+							</div>
+						{{/with}}
+						<div class="locIcn col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+							<a href="" id="locationIcon">Terms and Conditions</a> 
+						</div>
+					</div>
+					<div class="col-lg-12 saveoffer">
+						<div class="row">
+							<div class="col-lg-12">
+								<input type="submit" name="save" id="save" class="btn vendor-formOne-save" value="SAVE">
+							</div>
+    					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</template>
